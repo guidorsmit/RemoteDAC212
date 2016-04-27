@@ -59,11 +59,12 @@ public class ConnectFragment extends Fragment implements OnClickListener
     Typeface bold = Fonts.getBold(getActivity().getAssets());
     Typeface regular = Fonts.getRegualr(getActivity().getAssets());
     int colorRed = getResources().getColor(R.color.didit_red_circulair);
+    int colorGrey = getResources().getColor(R.color.didit_grey_circulair);
 
     TextView tv = (TextView) v.findViewById(R.id.connectLabel);
     tv.setTypeface(regular);
     // tv.setEms(EMS_LABELS);
-    tv.setTextColor(colorRed);
+    tv.setTextColor(colorGrey);
 
     Button button = (Button) v.findViewById(R.id.connectButton);
     button.setOnClickListener(this);
