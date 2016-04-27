@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.MainFragment" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/muteButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"     
+            android:background="@drawable/button_mute_wrapper" />
+        <Button
+            android:id="@+id/powerButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="15dp"         
+            android:background="@drawable/button_power_off_wrapper" />
+  
+      </RelativeLayout>
+
+     <RelativeLayout
+        android:id="@+id/relativeLayout_center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:layout_below="@+id/relativeLayout_buttons"
+        android:layout_above="@+id/linearLayout_labels">
+        
+        <ImageView
+	        android:id="@+id/background"
+	        android:layout_width="300dp"
+	        android:layout_height="300dp"
+	        android:src="@drawable/background_volume"
+	        android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:gravity="center" />
+
+        <NumberPicker
+            android:id="@+id/volumeNumberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center" />
+
+          <include
+            android:id="@+id/circle"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            layout="@layout/layout_cell"
+            android:gravity="center" />
+        
+    </RelativeLayout>
+  
+    
+       <LinearLayout
+        android:id="@+id/linearLayout_labels"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout_input"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="31dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/bpmLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textSize="8pt" />
+
+        <TextView
+            android:id="@+id/bitrateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textSize="8pt" />
+
+        <TextView
+            android:id="@+id/baudrateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="baudrate"
+            android:textSize="8pt"
+            android:visibility="gone" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/linearLayout_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/inputButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="126dp"
+            android:layout_y="451dp"
+            android:text="..INPUT.."
+            android:textSize="14pt" />
+
+        <Button
+            android:id="@+id/inputButtonSettings"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_x="240dp"
+            android:layout_y="448dp"
+            android:background="@drawable/button_input_settings_wrapper"
+            android:enabled="false"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

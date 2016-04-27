@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DIDIT Remote</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_bluetooth">Select Device</string>
+    <string name="action_quit">EXIT Remote</string>
+    
+    <string name="mute_prefix">MUTE</string>
+    <string name="set_mute_prefix">:MUTE=</string>
+    <string name="get_mute_prefix">:MUTE?</string>
+    
+    <string name="power_prefix">POWR</string>
+    <string name="set_power_prefix">:POWR=</string>
+    <string name="get_power_prefix">:POWR?</string>
+    
+    <string name="input_prefix">SORC</string>
+    <string name="set_input_prefix">:SORC=</string>
+    <string name="get_input_prefix">:SORC?</string>
+    
+    <string name="channel_freq_prefix">CHSF</string>
+    <string name="get_channel_freq_prefix">:CHSF?</string>
+    
+    <string name="channel_word_length_prefix">CHWL</string>
+    <string name="get_channel_word_length_prefix">:CHWL?</string>
+    
+    
+    <string name="bpm_prefix">bpm=</string>
+    <string name="get_bpm_prefix">get bpm</string>
+    
+    <string name="baudrate_prefix">baud=</string>
+    <string name="get_baudrate_prefix">get baud</string>
+    
+    
+    <string name="bitrate_prefix">brate=</string>
+    <string name="get_bitrate_prefix">get brate</string>
+    
+    <string name="volume_prefix">VOLU</string>
+    <string name="set_volume_prefix">:VOLU=</string>
+    <string name="get_volume_prefix">:VOLU?</string>
+    <string name="volume_up_prefix">:VOR+=1</string>
+    <string name="volume_down_prefix">:VOR-=1</string>
+    
+    <string name="button_connect">Connect</string>
+    
+    <string name="settings_filter_deemphasis">De-Emphasis filter</string>
+    <string name="settings_fir_roll_of_speed">FIR roll of speed</string>
+    <string name="settings_filter_osf">OSF filter</string>
+    <string name="settings_streaming">Streaming</string>
+    
+    
+    
+
+</resources>

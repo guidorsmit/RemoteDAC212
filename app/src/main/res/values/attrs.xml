@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressCircle">
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="progressColor" format="color" />
+        <attr name="incompleteProgressColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeWidthDynamic" format="dimension" />
+     
+    </declare-styleable>
+</resources>

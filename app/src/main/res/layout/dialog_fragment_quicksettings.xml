@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.onedayapp.remotedac212.fragments.dialogs.QuickSettingsDialogFragment" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+    	
+        <TextView
+            android:text="@string/settings_filter_deemphasis"
+            android:textColor="@color/didit_red_circulair"
+            android:layout_width="wrap_content"
+    	  	android:layout_height="wrap_content"/>
+    	<Switch
+	        android:id="@+id/switch_quicksettings_deemphasis_filter"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+    	
+        <TextView
+            android:text="@string/settings_fir_roll_of_speed"
+            android:textColor="@color/didit_red_circulair"
+            android:layout_width="wrap_content"
+    	  	android:layout_height="wrap_content"/>
+    	<Switch
+	        android:id="@+id/switch_quicksettings_fir_roll"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+    	
+        <TextView
+            android:text="@string/settings_filter_osf"
+            android:textColor="@color/didit_red_circulair"
+            android:layout_width="wrap_content"
+    	  	android:layout_height="wrap_content"/>
+    	<Switch
+	        android:id="@+id/switch_quicksettings_osf_filter"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+    	
+        <TextView
+            android:text="@string/settings_streaming"
+            android:textColor="@color/didit_red_circulair"
+            android:layout_width="wrap_content"
+    	  	android:layout_height="wrap_content"/>
+    	<Switch
+	        android:id="@+id/switch_quicksettings_streaming"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+</LinearLayout>
