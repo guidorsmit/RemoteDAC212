@@ -436,7 +436,7 @@ public class MainFragment extends Fragment
     m_powerState = powerState;
     if (m_powerState == PowerState.ON)
     {
-      button.setBackgroundResource(R.drawable.button_power_off_wrapper);
+      button.setBackgroundResource(R.drawable.button_power_on_wrapper);
     }
     else if (m_powerState == PowerState.OFF)
     {
@@ -462,11 +462,11 @@ public class MainFragment extends Fragment
     m_muteState = muteState;
     if (m_muteState == MuteState.ON)
     {
-      button.setBackgroundResource(R.drawable.button_mute_clicked_wrapper);
+      button.setBackgroundResource(R.drawable.button_mute_on_wrapper);
     }
     else if (m_muteState == MuteState.OFF)
     {
-      button.setBackgroundResource(R.drawable.button_mute_wrapper);
+      button.setBackgroundResource(R.drawable.button_mute_off_wrapper);
     }
   }
 
