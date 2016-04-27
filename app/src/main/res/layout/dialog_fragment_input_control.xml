@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="com.onedayapp.remotedac212.fragments.dialogs.InputControlDialogFragment" >
+    tools:context="onedayapp.com.remotedac212.fragments.dialogs.InputControlDialogFragment" >
 
     <TextView
         android:layout_width="220dp"

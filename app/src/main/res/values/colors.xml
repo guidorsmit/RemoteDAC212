@@ -16,6 +16,7 @@
     <item name="didit_grey_circulair" type="color">#BFBFBF</item>
     <item name="didit_light_grey_circulair" type="color">#DFDFDF</item>
     <item name="didit_grey_selected_circulair" type="color">#9F9F9F</item>
+    <item name="didit_black" type="color">#555555</item>
  
  
     <integer-array name="androidcolors">
