@@ -52,7 +52,7 @@ public class DataContainerChannelWordLength extends DataContainer
     case "9":
       text = "24bits";
       break;
-    case "A":
+    case "10":
       text = "32bits";
       break;
     default:

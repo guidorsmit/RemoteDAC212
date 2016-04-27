@@ -53,22 +53,22 @@ public class DataContainerChannelInputFrequency extends DataContainer
     case "9":
       text = "PCM 192kHz";
       break;
-    case "A":
+    case "10":
       text = "PCM 352.8kHz";
       break;
-    case "B":
+    case "11":
       text = "PCM 394kHz";
       break;
-    case "C":
+    case "12":
       text = "DSD 64";
       break;
-    case "D":
+    case "13":
       text = "DSD 128";
       break;
-    case "E":
+    case "14":
       text = "DSD 256";
       break;
-    case "F":
+    case "15":
       text = "DSD 512";
       break;
     default:
