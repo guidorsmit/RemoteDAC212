@@ -43,7 +43,15 @@
     <string name="volume_down_prefix">:VOR-=1</string>
     
     <string name="button_connect">Connect</string>
-    
+
+    <string name="state_not_connected">Not connected</string>
+    <string name="state_connecting">Connecting: </string>
+    <string name="state_connected">Connected: </string>
+
+
+    <string name="select_device">Please select device</string>
+
+
     <string name="settings_filter_deemphasis">De-Emphasis filter</string>
     <string name="settings_fir_roll_of_speed">FIR roll of speed</string>
     <string name="settings_filter_osf">OSF filter</string>

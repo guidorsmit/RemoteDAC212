@@ -63,8 +63,12 @@ public class ConnectFragment extends Fragment implements OnClickListener
 
     TextView tv = (TextView) v.findViewById(R.id.connectLabel);
     tv.setTypeface(regular);
-    // tv.setEms(EMS_LABELS);
     tv.setTextColor(colorGrey);
+
+    tv = (TextView) v.findViewById(R.id.stateConnectLabel);
+    tv.setTypeface(regular);
+    tv.setTextColor(colorGrey);
+
 
     Button button = (Button) v.findViewById(R.id.connectButton);
     button.setOnClickListener(this);
@@ -105,8 +109,6 @@ public class ConnectFragment extends Fragment implements OnClickListener
 
               ((EditText) child).setTypeface(bold);
               ((EditText) child).setFocusable(false);
-              ;
-
             }
           }
         }
@@ -150,6 +152,28 @@ public class ConnectFragment extends Fragment implements OnClickListener
     refreshList(v);
 
     return v;
+  }
+
+  public void updateConnectState()
+  {
+    View v;
+    v = getView();
+
+    if(v == null)
+    {
+      return;
+    }
+
+    TabbedMainActivity tba;
+    tba = getTabbedMainActivity();
+
+    if(tba == null)
+    {
+      return;
+    }
+
+    TextView tv = (TextView) v.findViewById(R.id.stateConnectLabel);
+    tv.setText(tba.getConnectMsg());
   }
 
   @Override
