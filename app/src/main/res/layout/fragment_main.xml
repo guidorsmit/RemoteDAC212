@@ -119,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_x="126dp"
             android:layout_y="451dp"
-            android:text="..INPUT.."
+            android:text="INPUT"
             android:textSize="14pt" />
 
         <Button
