@@ -6,6 +6,7 @@ import onedayapp.com.remotedac212.settings.*;
 import onedayapp.com.remotedac212.states.*;
 import onedayapp.com.utils.*;
 
+import android.annotation.SuppressLint;
 import android.app.*;
 import android.graphics.*;
 import android.os.*;
@@ -14,6 +15,7 @@ import android.view.*;
 import android.view.View.*;
 import android.widget.*;
 
+@SuppressLint("ValidFragment")
 public class InputControlDialogFragment extends DialogFragment
     implements OnClickListener
 {

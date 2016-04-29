@@ -4,6 +4,7 @@ import onedayapp.com.remotedac212.*;
 import onedayapp.com.remotedac212.fragments.*;
 import onedayapp.com.remotedac212.settings.*;
 
+import android.annotation.SuppressLint;
 import android.graphics.*;
 import android.os.*;
 import android.support.v4.app.*;
@@ -11,6 +12,7 @@ import android.view.*;
 import android.widget.*;
 import android.widget.CompoundButton.*;
 
+@SuppressLint("ValidFragment")
 public class QuickSettingsDialogFragment extends DialogFragment
     implements OnCheckedChangeListener
 {
