@@ -16,13 +16,13 @@
 		android:id="@+id/connectLabel"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Please select device"
+		android:text="@string/select_device"
 		android:layout_gravity="center_horizontal"
 		android:layout_marginTop="20dp"
 		android:textSize="8pt"/>
     
     
-     <NumberPicker
+	<NumberPicker
         android:id="@+id/bluetoothNumberPicker" 
         android:layout_width="match_parent"
         android:layout_marginRight="50dp"
@@ -30,32 +30,48 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"/>
+
+	<TextView
+		android:id="@+id/stateConnectLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/state_not_connected"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="20dp"
+		android:textSize="8pt"/>
    	
    	<LinearLayout 
     	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:orientation="horizontal" 
-    	android:layout_marginTop="120dp"
-    	android:gravity="center_horizontal"
-    	android:layout_gravity="center_horizontal">
-	      
-	    <Button 
-	        android:id="@+id/searchButton"
-	        android:layout_width="70dp"
-	        android:layout_height="70dp"
-	        android:layout_marginRight="40dp"
-		    android:background="@drawable/button_search_wrapper"
-	        android:layout_gravity="center_horizontal"/>  
-	        
-	     <Button 
-	        android:id="@+id/connectButton"
-	        android:layout_width="70dp"
-	        android:layout_height="70dp"
-	        android:layout_marginLeft="40dp"
-		    android:background="@drawable/button_connect_wrapper"
-	        android:layout_gravity="center_horizontal"/>
+		android:layout_height="0dip"
+		android:layout_weight="1"
+		android:gravity="center|bottom"
+		android:layout_gravity="center|bottom"
+    	android:orientation="vertical"
+		android:layout_marginTop="20dp"
+		android:layout_marginBottom="16dp">
 
-	     
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/searchButton"
+				android:layout_width="70dp"
+				android:layout_height="70dp"
+				android:layout_marginRight="40dp"
+				android:background="@drawable/button_search_wrapper"
+				android:layout_gravity="center_horizontal"/>
+
+			<Button
+				android:id="@+id/connectButton"
+				android:layout_width="70dp"
+				android:layout_height="70dp"
+				android:layout_marginLeft="40dp"
+				android:background="@drawable/button_connect_wrapper"
+				android:layout_gravity="center_horizontal"/>
+
+		</LinearLayout>
 	 </LinearLayout>  
 </LinearLayout>
 

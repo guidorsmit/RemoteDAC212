@@ -14,6 +14,7 @@ import android.bluetooth.*;
 import android.os.*;
 import android.support.v4.app.*;
 import android.support.v4.view.*;
+import android.util.Log;
 import android.widget.*;
 
 public class TabbedMainActivity extends FragmentActivity
@@ -47,6 +48,9 @@ public class TabbedMainActivity extends FragmentActivity
   // updated aswel
   private static int NR_OF_PAGES = 2;
 
+  // Message represents the state of the connection
+  private String m_connectMsg;
+
   @Override
   protected void onCreate(Bundle savedInstanceState)
   {
@@ -59,6 +63,8 @@ public class TabbedMainActivity extends FragmentActivity
     m_blockedTime = 0;
     // Get the volume prefix -- for the hack
     s_volumePrefix = getResources().getString(R.string.volume_prefix);
+
+    m_connectMsg = getResources().getString(R.string.state_not_connected);
 
     // ViewPager and its adapters use support library
     // fragments, so use getSupportFragmentManager.
@@ -139,6 +145,31 @@ public class TabbedMainActivity extends FragmentActivity
     m_viewPager.setCurrentItem(0);
   }
 
+  public String getConnectMsg()
+  {
+    return m_connectMsg;
+  }
+
+  private void setStateNotConnected()
+  {
+    m_connectMsg = getResources().getString(R.string.state_not_connected);
+    m_pagerAdapter.getConnectFragment().updateConnectState();
+  }
+
+  private void setStateConnecting(String deviceName)
+  {
+    m_connectMsg = getResources().getString(R.string.state_connecting) + deviceName;
+    m_pagerAdapter.getConnectFragment().updateConnectState();
+  }
+
+  private void setStateConnected(String deviceName)
+  {
+    m_connectMsg = getResources().getString(R.string.state_connected) + deviceName;
+    m_pagerAdapter.getConnectFragment().updateConnectState();
+  }
+
+
+
   public void connect(String deviceName, String deviceAddress)
   {
     // Get the data from the ScanActivity
@@ -152,6 +183,7 @@ public class TabbedMainActivity extends FragmentActivity
     connectDevice(deviceAddress);
 
     // Connect to the bluetooth device
+    setStateConnecting(deviceName);
     System.out.println("Connection to: " + deviceName);
   }
 
@@ -364,6 +396,7 @@ public class TabbedMainActivity extends FragmentActivity
           else
           {
             // gotoScanPage();
+            setStateNotConnected();
             m_allowToSend = false;
           }
         }
@@ -373,6 +406,8 @@ public class TabbedMainActivity extends FragmentActivity
     @Override
     public void onRemoteDeviceConnected(String deviceName)
     {
+      setStateConnected(deviceName);
+
       final String deviceNam = deviceName;
       runOnUiThread(new Runnable()
       {
@@ -478,6 +513,7 @@ public class TabbedMainActivity extends FragmentActivity
         {
           Toast.makeText(getApplicationContext(), "Connection Lost",
               Toast.LENGTH_SHORT).show();
+          setStateNotConnected();
 
           gotoScanPage();
         }
@@ -494,6 +530,7 @@ public class TabbedMainActivity extends FragmentActivity
         {
           Toast.makeText(getApplicationContext(), "Connection Failed",
               Toast.LENGTH_SHORT).show();
+          setStateNotConnected();
 
           gotoScanPage();
         }
