@@ -336,6 +336,7 @@ public class ConnectFragment extends Fragment implements OnClickListener
   {
     if (v.getId() == R.id.searchButton)
     {
+      //ensureDiscoverable();
       doDiscovery();
       return;
     }
@@ -385,6 +386,22 @@ public class ConnectFragment extends Fragment implements OnClickListener
 
     getTabbedMainActivity().connect(m_deviceName, m_deviceAddress);
     getTabbedMainActivity().gotoNextPage();
+  }
+
+  private void ensureDiscoverable()
+  {
+    if(m_bluetoothAdapter == null)
+    {
+      return;
+    }
+
+    if (m_bluetoothAdapter.getScanMode() != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
+      Intent discoverableIntent = new Intent(
+          BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+      discoverableIntent.putExtra(
+          BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+      startActivity(discoverableIntent);
+    }
   }
 
   public String getDeviceAddress()
