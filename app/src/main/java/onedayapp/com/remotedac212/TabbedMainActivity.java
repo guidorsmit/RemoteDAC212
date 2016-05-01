@@ -406,14 +406,14 @@ public class TabbedMainActivity extends FragmentActivity
     @Override
     public void onRemoteDeviceConnected(String deviceName)
     {
-      setStateConnected(deviceName);
-
       final String deviceNam = deviceName;
       runOnUiThread(new Runnable()
       {
         @Override
         public void run()
         {
+          setStateConnected(deviceNam);
+
           Toast.makeText(getApplicationContext(),
               "Connection to " + deviceNam + " Successful", Toast.LENGTH_SHORT)
               .show();
