@@ -41,7 +41,7 @@ public class TabbedMainActivity extends FragmentActivity
   private List<DataCallback> m_callbackList;
 
   // Update speed of the thread. time in MS
-  private static int UPDATE_SPEED = 2500;
+  private static int UPDATE_SPEED = 500;
   // Time blocked not receiving volume packets. time in MS
   private static int BLOCKED_TIME = 2000;
   // Nr of pages in the app, Keep in mind that the pageAdapter needs to be
