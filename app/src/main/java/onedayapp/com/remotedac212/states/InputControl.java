@@ -8,8 +8,8 @@ public enum InputControl
 {
   // ANALOG("anaglog"), DIGITAL("digital"), USB("usb");
   XLR("AES", 1), RCA1("COAX 1", 2), RCA2("COAX 2", 3), OPTICAL("OPTICAL",
-      4), USB("USB", 5), BT("Bluetooth", 6), IC2_1("I2C#1", 7), IC2_2("I2C#2",
-          8), IC2_3("I2C#3", 9), IC2_4("I2C#4", 10);
+      4), USB("USB", 5), BT("Bluetooth", 6), IC2_1("I2S#1", 7), IC2_2("I2S#2",
+          8), IC2_3("I2S#3", 9), IC2_4("I2S#4", 10);
 
   private String m_name;
   private int m_state;
