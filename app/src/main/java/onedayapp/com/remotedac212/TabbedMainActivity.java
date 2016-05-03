@@ -440,6 +440,17 @@ public class TabbedMainActivity extends FragmentActivity
             String received = "";
 
             split = StringUtil.split(readData, CR);
+
+            if (split == null)
+            {
+              return;
+            }
+
+            if(split.size() == 0)
+            {
+              return;
+            }
+
             received = m_receiveData;
             received += split.get(0);
 
