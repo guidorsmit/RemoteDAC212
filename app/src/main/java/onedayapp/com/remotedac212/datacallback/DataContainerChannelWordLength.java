@@ -3,7 +3,7 @@ package onedayapp.com.remotedac212.datacallback;
 
 import android.widget.*;
 
-public class DataContainerChannelWordLength extends DataContainer
+public class DataContainerChannelWordLength extends AbstractDataContainerTextView
     implements DataCallback
 {
   public DataContainerChannelWordLength(TextView tv, String sendCmd,
@@ -57,9 +57,12 @@ public class DataContainerChannelWordLength extends DataContainer
       break;
     default:
       text = "";
-
     }
+
+    setOneShot(1);
     getTextView().setText(text);
+
+
   }
 
   @Override

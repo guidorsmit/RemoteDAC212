@@ -3,7 +3,7 @@ package onedayapp.com.remotedac212.datacallback;
 
 import android.widget.*;
 
-public class DataContainerChannelInputFrequency extends DataContainer
+public class DataContainerChannelInputFrequency extends AbstractDataContainerTextView
     implements DataCallback
 {
   public DataContainerChannelInputFrequency(TextView tv, String sendCmd,
@@ -75,6 +75,7 @@ public class DataContainerChannelInputFrequency extends DataContainer
       text = "";
 
     }
+    setOneShot(1);
     getTextView().setText(text);
   }
 
