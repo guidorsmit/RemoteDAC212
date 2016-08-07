@@ -8,7 +8,7 @@ public abstract class AbstractDataContainerTextView implements DataCallback
 {
   private String m_sendCmd;
   private String m_dataPrefix;
-  private MainFragment m_tv;
+  private TextView m_tv;
 
   private int m_oneShot;
 

@@ -62,7 +62,7 @@ public class MainFragment extends Fragment
     NumberPicker volumePicker;
     Button button;
     TextView tv;
-    DataContainer dataContainer;
+    DataCallback dataCallback;
     AudioManager audio;
 
     Typeface bold;
@@ -131,8 +131,8 @@ public class MainFragment extends Fragment
 
     cmd = getResources().getString(R.string.get_channel_word_length_prefix);
     prefix = getResources().getString(R.string.channel_word_length_prefix);
-    dataContainer = new DataContainerChannelWordLength(tv, cmd, prefix);
-    getTabbedMainActivity().addDataCallback(dataContainer);
+    dataCallback = new DataContainerChannelWordLength(tv, cmd, prefix);
+    getTabbedMainActivity().addDataCallback(dataCallback);
 
     tv = (TextView) v.findViewById(R.id.bitrateLabel);
     tv.setTypeface(regular);
@@ -141,8 +141,8 @@ public class MainFragment extends Fragment
 
     cmd = getResources().getString(R.string.get_channel_freq_prefix);
     prefix = getResources().getString(R.string.channel_freq_prefix);
-    dataContainer = new DataContainerChannelInputFrequency(tv, cmd, prefix);
-    getTabbedMainActivity().addDataCallback(dataContainer);
+    dataCallback = new DataContainerChannelInputFrequency(tv, cmd, prefix);
+    getTabbedMainActivity().addDataCallback(dataCallback);
 
     tv = (TextView) v.findViewById(R.id.baudrateLabel);
     tv.setTypeface(regular);
@@ -151,7 +151,7 @@ public class MainFragment extends Fragment
 
     cmd = getResources().getString(R.string.get_baudrate_prefix);
     prefix = getResources().getString(R.string.baudrate_prefix);
-    dataContainer = new DataContainer(tv, cmd, prefix);
+    dataCallback = new DataContainer(tv, cmd, prefix);
     // getTabbedMainActivity().addDataCallback(dataContainer);
 
     // Add volume handler
