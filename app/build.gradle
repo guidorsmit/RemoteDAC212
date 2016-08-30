@@ -8,8 +8,8 @@ android {
         applicationId "onedayapp.com.onedayapp.com.remotedac212"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.0.4"
     }
     buildTypes {
         release {

@@ -8,7 +8,7 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/icon_bluetooth_text"
+        android:src="@drawable/icon_bluetooth"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp" />
 
@@ -20,8 +20,7 @@
 		android:layout_gravity="center_horizontal"
 		android:layout_marginTop="20dp"
 		android:textSize="8pt"/>
-    
-    
+
 	<NumberPicker
         android:id="@+id/bluetoothNumberPicker" 
         android:layout_width="match_parent"
